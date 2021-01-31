@@ -10,7 +10,7 @@ const TheirMessage = ({ lastMessage, message }) => {
           style={{ backgroundImage: `url(${message?.sender?.avatar})` }}
         />
       )}
-      // check if message is an image
+
       {message?.attachments?.length > 0 ? (
         <img
           src={message.attachments[0].file}
