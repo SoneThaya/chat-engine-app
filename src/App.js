@@ -1,13 +1,18 @@
-import { ChatEngine } from 'react-chat-engine';
+import { ChatEngine } from "react-chat-engine";
+import ChatFeed from "./components/ChatFeed"
 
-import "./App.css"
+import "./App.css";
 
 const App = () => {
     return (
-        <div>
-            
-        </div>
-    )
-}
+        <ChatEngine
+            height="100vh"
+            projectID={`${process.env.REACT_APP_PROJECT_ID}`}
+            userName="bob"
+            userSecret={`${process.env.REACT_APP_USER_SECRET}`}
+            renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
+    />
+  );
+};
 
-export default App
+export default App;
